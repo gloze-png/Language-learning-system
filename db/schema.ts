@@ -18,7 +18,8 @@ export const userProgress =pgTable("user_progress",{
   hearts:integer("hearts").notNull().default(5),
   points:integer ("points").notNull().default(0),
 });
-export const userProgressRelations = relations(userProgress,({ one })=>
+export const userProgressRelations = 
+relations(userProgress,({ one })=>
 
 ({
   activeCourse: one(courses,{
