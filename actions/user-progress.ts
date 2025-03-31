@@ -1,10 +1,10 @@
 "use server";
+import { redirect } from "next/navigation";
 import db from "@/db/drizzle";
 import { getCourseById, getUserProgress } from "@/db/queries";
 import { userProgress } from "@/db/schema";
 import { auth, currentUser} from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
 
 export const upsertUserProgress = async (courseId: number) => {
   const { userId } = await auth();
