@@ -59,7 +59,7 @@ export const getUnits = cache(async ()=>{
       });
       return { ...lessons, completed: allCompletedChallenges};
     });
-    return {...units, lessons: lessonsWithCompletedStatus};
+    return {...unit, lessons: lessonsWithCompletedStatus};
   });
   return normalizedData;
 });

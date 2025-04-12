@@ -8,11 +8,20 @@ type Props ={
   lessons:(typeof lessons.$inferSelect & {
     completed:boolean;
   })[];
-  activeLessons:typeof lessons.$inferSelect & {
+  activeLesson:typeof lessons.$inferSelect & {
     unit:typeof units.$inferSelect;
     } | undefined;
+    activeLessonPercentage: number;
   };
-  export const Unit = ({} : Props) =>{
+  export const Unit = ({
+    id,
+    order,
+    title,
+    description,
+    lessons,
+    activeLesson,
+    activeLessonPercentage,
+  } : Props) =>{
     return(
       <div></div>
     );

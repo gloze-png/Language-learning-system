@@ -16,6 +16,7 @@ const LearnPage =async () => {
   ] = await Promise.all([
     userProgressData,
     unitsData,
+    getUnits(),
   ]);
 
   if (!userProgress || !userProgress.activeCourse) {
@@ -35,13 +36,13 @@ const LearnPage =async () => {
         {units.map((unit) =>(
           <div key={unit.id} className="mb-10">
          <Unit
-          id={unit.id}
-          Order={unit.order}
-          Description={unit.description}
-          Title={unit.title}
-          lessons={unit.lessons ?? []} 
-          activeLesson={undefined}
-          activeLessonPercentage={0}
+         id={unit.id}
+         order={unit.order}
+         description = {unit.description}
+         title ={unit.title}
+         lessons = {unit.lessons}
+         activeLesson ={undefined}
+         activeLessonPercentage = {0}
          />
           </div>
         ))}
@@ -51,7 +52,5 @@ const LearnPage =async () => {
 };
 
 export default LearnPage;
-
-
 
 
