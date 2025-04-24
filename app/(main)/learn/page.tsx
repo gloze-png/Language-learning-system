@@ -26,24 +26,6 @@ const LearnPage = async () => {
     getUnits(),
   ]);
 
-
-  // const [
-  //   userProgress,
-  //   courseProgress,
-  //   units,
-  //   lessonPercentage,
-  // ] = await Promise.all([
-  //   userProgressData,
-  //   courseProgressData,
-  //   unitsData,
-  //   lessonPercentageData,
-  // ]);
-
-
-
-
-
-
   if (!userProgress || !userProgress.activeCourse) {
     redirect("/courses");
   }
