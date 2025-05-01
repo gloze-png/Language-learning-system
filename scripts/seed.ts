@@ -90,7 +90,7 @@ const main = async () => {
     {
       id:1,
       lessonId:1,
-      type:"SELECT",
+      type:"ASSIST",
       order:1,
       question: 'Which one of these is the "the man"?',
     },
